@@ -16,4 +16,3 @@ echo "---> Starting push $REG_URL/microimages/$IMAGE:$VERSION"
 docker tag -f $REG_URL/microimages/$IMAGE $REG_URL/microimages/$IMAGE:$VERSION
 
 docker push $REG_URL/microimages/$IMAGE
-
