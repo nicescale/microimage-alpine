@@ -10,4 +10,4 @@ maintainer Carson,C.J.Zeong <zcy@nicescale.com>
 # Predefine TZ for local timezone
 env TZ "Asia/Shanghai"
 
-run apk add --update openssl 
+run apk add --update openssl bash
