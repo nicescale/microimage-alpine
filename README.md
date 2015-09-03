@@ -1,4 +1,4 @@
-![](https://discuss.csphere.cn/uploads/default/original/2X/9/9f0507b1695ef97e21a54baf2aaf1a652de678b9.png)
+![alpine](https://csphere.cn/assets/c7a87396-7b8a-4c62-ac99-65c2a38124f2)
 
 ## 如何使用该镜像
 
