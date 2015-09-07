@@ -1,4 +1,4 @@
-![alpine](https://csphere.cn/assets/c7a87396-7b8a-4c62-ac99-65c2a38124f2)
+![alpine](https://csphere.cn/assets/755c1c51-c60b-4e2c-823d-9a70bcb56f7f)
 
 ## 如何使用该镜像
 
