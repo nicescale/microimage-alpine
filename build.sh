@@ -5,14 +5,14 @@ set -e
 export CON_NAME=alpine_t
 export REG_URL=d.nicescale.com:5000
 export IMAGE=alpine
-export VERSION=3.2
+export VERSION=3.3
 
-docker build -t $REG_URL/microimages/$IMAGE .
+docker build -t microimages/$IMAGE .
 
-./test.sh
+#./test.sh
 
-echo "---> Starting push $REG_URL/microimages/$IMAGE:$VERSION"
+echo "---> Starting push microimages/$IMAGE:$VERSION"
 
-docker tag -f $REG_URL/microimages/$IMAGE $REG_URL/microimages/$IMAGE:$VERSION
+docker tag -f microimages/$IMAGE microimages/$IMAGE:$VERSION
 
-docker push $REG_URL/microimages/$IMAGE
+docker push microimages/$IMAGE
