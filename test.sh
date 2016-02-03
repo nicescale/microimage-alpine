@@ -2,12 +2,8 @@
 
 set -e
 
-if docker ps -a | grep -i $CON_NAME; then
-    docker rm -f "$CON_NAME"
-    docker run -d -t --name $CON_NAME $REG_URL/csphere/$IMAGE:$VERSION sh
-else
-    docker run -d -t --name $CON_NAME $REG_URL/csphere/$IMAGE:$VERSION sh
-fi
+docker rm -f "$CON_NAME" > /dev/null 2>&1 || true
+docker run -d --name $CON_NAME $IMAGE
 
 docker exec $CON_NAME /bin/echo "testing"
 docker exec $CON_NAME cat /etc/resolv.conf

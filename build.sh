@@ -3,16 +3,19 @@
 set -e
 
 export CON_NAME=alpine_t
-export REG_URL=d.nicescale.com:5000
-export IMAGE=alpine
-export VERSION=3.3
+export REG_URL=index.csphere.cn
+export IMAGE=microimages/alpine
+export TAGS="3.3 3"
 
-docker build -t microimages/$IMAGE .
+docker build -t $IMAGE .
+./test.sh
 
-#./test.sh
+docker tag -f $IMAGE $REG_URL/$IMAGE
 
-echo "---> Starting push microimages/$IMAGE:$VERSION"
+for t in $TAGS; do
+  docker tag -f $IMAGE $REG_URL/$IMAGE:$t
+  docker tag -f $IMAGE $IMAGE:$t
+done
 
-docker tag -f microimages/$IMAGE microimages/$IMAGE:$VERSION
-
-docker push microimages/$IMAGE
+docker push $IMAGE
+docker push $REG_URL/$IMAGE
