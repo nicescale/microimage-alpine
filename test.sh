@@ -7,7 +7,7 @@ docker run -d --name $CON_NAME $IMAGE
 
 docker exec $CON_NAME /bin/echo "testing"
 docker exec $CON_NAME cat /etc/resolv.conf
-docker exec $CON_NAME wget -O - $REG_URL
+docker exec $CON_NAME wget -O - https://$REG_URL
 
 docker rm -f $CON_NAME
 
