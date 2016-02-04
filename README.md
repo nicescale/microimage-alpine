@@ -2,25 +2,25 @@
 
 ## 如何使用该镜像
 
-    $ docker pull csphere/alpine:3.2
+    $ docker pull microimages/alpine:3.3
 
 ## 快速开始
 
-    $ docker run -it csphere/alpine:3.2 sh
+    $ docker run -it microimages/alpine:3.3 sh
 
-## 基于`csphere/alpine`镜像,构建其他镜像
+## 基于`microimage/alpine`镜像,构建其他镜像
 
 Dockefile内容：
 
 ```Dockerfile
-from csphere/alpine:3.2
+from microimage/alpine:3.3
 run apk add --update nginx
 ...其他命令
 ```
 
 执行构建命令:
 
-    $ docker build -t csphere/nginx .
+    $ docker build -t microimages/nginx .
 
 ## 授权和法律
 
