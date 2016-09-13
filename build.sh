@@ -5,7 +5,7 @@ set -e
 export CON_NAME=alpine_t
 export REG_URL=index.csphere.cn
 export IMAGE=microimages/alpine
-export TAGS="3.3 3"
+export TAGS="3.4 3"
 
 docker build -t $IMAGE .
 ./test.sh
