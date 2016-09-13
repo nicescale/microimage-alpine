@@ -4,7 +4,7 @@ maintainer william <wlj@nicescale.com>
 # Predefine TZ for local timezone
 env TZ "Asia/Shanghai"
 
-run apk add wget openssl bash curl tzdata \
+run apk add -U wget openssl bash curl tzdata \
   bash-completion coreutils bind-tools sed grep && \
   ln -sf /bin/bash /bin/sh && \
   cp /usr/share/zoneinfo/$TZ /etc/localtime && \
