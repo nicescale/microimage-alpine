@@ -20,6 +20,6 @@ for t in $TAGS; do
   docker tag -f $IMAGE $IMAGE:$t
 done
 
-docker push $IMAGE
+#docker push $IMAGE
 docker push $REG_URL/$IMAGE
 docker push $IREG_URL/$IMAGE
